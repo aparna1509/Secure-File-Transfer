@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encrypt File - Sender</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>🔐 Encrypt and Send File</h2>
+    <form action="/send" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Select File:</label>
+            <input type="file" name="file" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Enter Password:</label>
+            <input type="text" name="password" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Encrypt & Generate Link</button>
+    </form>
+    <a href="/" class="btn btn-link mt-3">⬅️ Back to Home</a>
+</body>
+</html>

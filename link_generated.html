@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Generated</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>✅ File Encrypted & Link Generated!</h2>
+    <p><strong>Share this link with the receiver:</strong></p>
+    <div class="input-group mb-3">
+        <input type="text" id="link" class="form-control" value="{{ link }}" readonly />
+        <div class="input-group-append">
+            <button class="btn btn-secondary" onclick="copyLink()">📋 Copy</button>
+        </div>
+    </div>
+    <p><b>Password Strength:</b> {{ strength }}</p>
+    <a href="/" class="btn btn-link">⬅️ Back to Home</a>
+
+    <script>
+        function copyLink() {
+            var copyText = document.getElementById("link");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Link copied to clipboard! 📋");
+        }
+    </script>
+</body>
+</html>
